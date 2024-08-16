@@ -3,8 +3,12 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Projets", href: "/projects" },
+  { name: "Blog", href: "/contact" },
+  {name : "CV", href: "/cv"},
+  {name : "Rapport", href: "/rapport"},
+  {name : "Accueil", href: "/"}
+
 ];
 
 export default function Home() {
@@ -16,7 +20,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              className="text-sm duration-500 text-zinc-300 hover:text-zinc-300"
             >
               {item.name}
             </Link>
@@ -29,7 +33,7 @@ export default function Home() {
         quantity={100}
       />
       <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        chronark
+        Cosmos
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
