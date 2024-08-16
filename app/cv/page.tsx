@@ -1,14 +1,16 @@
 import Head from 'next/head';
-
+import { Navigation } from '../components/nav';
 export default function CV() {
   return (
     <div>
       <Head>
+    
         <title></title>
         <meta name="description" content="CV de Mon Nom" />
       </Head>
 
       <header className="bg-blue-600 text-white p-6">
+        <Navigation></Navigation>
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold">Lazhar Bessadi</h1>
           <p className="text-xl"> Développeur d'applications mobiles</p>
