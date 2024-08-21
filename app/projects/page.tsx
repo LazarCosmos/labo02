@@ -39,22 +39,22 @@ const socials = [
 		handle: "Expérience React",
 		img : (
 			<div className="relative w-full" style={{ paddingBottom: '50.25%' }}> 
-				<img src="/personne_01.jpeg" alt="personne" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+				<img src="/institut.jpeg" alt="personne" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
 			</div>
 		),
 		icon2: <img src="/icons/icons8-angularjs.svg" alt="Angular.js" width={60} height={60} />
 	},
 	{
 		icon: <School size={40} />,
-		href: "https://angular-project-five-rust.vercel.app/accueil",
+		href: "https://github.com/LazarCosmos/Calculatrice-Swift2",
 		label: "Voir le projet",
 		handle: "Expérience React",
 		img : (
 			<div className="relative w-full" style={{ paddingBottom: '50.25%' }}> 
-				<img src="/personne_01.jpeg" alt="personne" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+				<img src="/calcul.jpeg" alt="personne" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
 			</div>
 		),
-		icon2: <img src="/icons/icons8-vue-js.svg" alt="Vue.js" width={60} height={60} />
+		icon2: <img src="/icons/icons8-swift.svg" alt="Vue.js" width={60} height={60} />
 	},
 ];
 
