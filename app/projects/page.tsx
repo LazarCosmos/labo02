@@ -1,12 +1,13 @@
 "use client";
-import { Github, Linkedin, Mail, School, Twitter } from "lucide-react";
+import { School} from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import React from "react";
 import { ScrollingTechnologies } from "../components/scrollingTechnologies";
 
-const socials = [
+
+const socials= [
 	{
 		icon: <img src="/Poke_Ball_icon.svg" alt="Poké Ball" width={60} height={60} />,
 		href: "https://poke-chi.vercel.app",
@@ -61,12 +62,15 @@ const socials = [
 
 export default function Project() {
 	return (
+
+		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
+
 		<div className="bg-black-800 min-h-screen flex flex-col">
 			<Navigation />
-			
-			<div className="flex-1 container flex items-center justify-center px-4 mx-auto">
 
-				<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+			<div className="flex-1 container flex items-center justify-center px-4 mx-auto pt-[10vh]  ">
+				<div
+					className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 w-full">
 					{socials.map((s, index) => (
 						<Card key={index}>
 							<Link
@@ -78,19 +82,23 @@ export default function Project() {
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
 									aria-hidden="true"
 								/>
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+								<span
+									className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon}
 								</span>
 								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xs font-medium duration-150 xl:text-2xl text-zinc-200 group-hover:text-white font-display">
+									<span
+										className="lg:text-xs font-medium duration-150 xl:text-2xl text-zinc-200 group-hover:text-white font-display">
 										{s.handle}
 									</span>
-									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+									<span
+										className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
 									{s.img}
 								</div>
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+								<span
+									className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon2}
 								</span>
 							</Link>
@@ -99,7 +107,8 @@ export default function Project() {
 				</div>
 			</div>
 
-			<ScrollingTechnologies />
+			<ScrollingTechnologies/>
+		</div>
 		</div>
 	);
 }

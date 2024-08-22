@@ -1,82 +1,112 @@
-import Head from 'next/head';
-import { Navigation } from '../components/nav';
+"use client";
+import Link from "next/link";
+import { Card } from "../components/card";
+import {Navigation} from "../components/nav";
+
+const cvSections = [
+  {
+    title: "Coordonnées",
+    content: (
+        <div>
+          <p className="font-medium">Téléphone: 438 871 0600</p>
+          <p>Email: <a href="mailto:lazhar.contact@gmail.com" className="text-blue-500">lazhar.contact@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/lazar-cosmos/" className="text-blue-500">Lazar Bessadi</a></p>
+        </div>
+    ),
+  },
+  {
+    title: "Compétences",
+    content: (
+        <ul>
+          <li>Esprit d’équipe & d’initiative</li>
+          <li>Débrouillard</li>
+          <li>Curieux</li>
+          <li>Leadership</li>
+        </ul>
+    ),
+  },
+  {
+    title: "Compétences Techniques",
+    content: (
+        <ul>
+          <li>Développement de logiciels et applications mobiles</li>
+          <li>Installation et maintenance de réseaux et matériels informatiques</li>
+          <li>Support technique et dépannage</li>
+        </ul>
+    ),
+  },
+  {
+    title: "Frameworks",
+    content: (
+        <ul>
+          <li>Angular</li>
+          <li>React</li>
+          <li>Vue.Js</li>
+          <li>Node.JS</li>
+        </ul>
+    ),
+  },
+  {
+    title: "Langages de Programmation",
+    content: (
+        <ul>
+          <li>Kotlin</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>MySQL</li>
+          <li>Swift</li>
+        </ul>
+    ),
+  },
+  {
+    title: "Projets et Réalisations",
+    content: (
+        <ul>
+          <li>Projet PokemonCard avec Vuetify</li>
+          <li>Optimisation Database (MySQL) de Walmart</li>
+          <li>Calculatrice (Swift-Xcode)</li>
+        </ul>
+    ),
+  },
+  {
+    title: "Langues",
+    content: (
+        <ul>
+          <li>Français</li>
+          <li>Kabyle (langue maternelle)</li>
+          <li>Anglais (basique)</li>
+        </ul>
+    ),
+  },
+];
+
 export default function CV() {
   return (
-    <div>
-      <Head>
-    
-        <title></title>
-        <meta name="description" content="CV de Mon Nom" />
-      </Head>
-
-      <header className="bg-blue-600 text-white p-6">
-        <Navigation></Navigation>
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Lazhar Bessadi</h1>
-          <p className="text-xl"> Développeur d'applications mobiles</p>
+      <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+          <Navigation/>
+        <div className="container flex items-center justify-center min-h-screen px-4 mx-auto pt-[10vh]">
+          <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-4 lg:gap-16">
+            {cvSections.map((section) => (
+                <Card key={section.title}>
+                  <div className="relative flex flex-col items-center gap-4 p-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16">
+                <span
+                    className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+                    aria-hidden="true"
+                />
+                    <div className="z-10 flex flex-col items-center">
+                      <h2 className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
+                        {section.title}
+                      </h2>
+                      <div className="mt-4 text-sm text-center text-zinc-400 group-hover:text-zinc-200">
+                        {section.content}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+            ))}
+          </div>
         </div>
-      </header>
-
-      <main className="container mx-auto p-6">
-      
-        <section className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Profil</h2>
-          <h2>
-            Ingénieur en écologie avec une solide expérience dans les projets de conservation, 
-            le développement d'applications mobiles, et l'analyse de données. Passionné par 
-            l'intégration de l'intelligence artificielle dans les projets environnementaux.
-          </h2>
-        </section>
-
-        
-        <section className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Expérience Professionnelle</h2>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold">Technicien en Maintenance Informatique</h3>
-            <p className="text-gray-600">2013 - 2021 | Ma propre entreprise</p>
-            <p>
-              Maintenance et vente de matériel informatique, installation de réseaux, 
-              et service à la clientèle.
-            </p>
-          </div>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold">Volontaire Écologique</h3>
-            <p className="text-gray-600">Divers projets</p>
-            <p>
-              Participation à des projets de conservation, réintroduction d'espèces, 
-              et reforestation en Kabylie.
-            </p>
-          </div>
-        </section>
-
-        
-        <section className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Compétences</h2>
-          <ul className="list-disc list-inside">
-            <li>Développement d'applications mobiles (Swift, Kotlin)</li>
-            <li>Analyse de données et intelligence artificielle</li>
-            <li>Maintenance et support informatique</li>
-            <li>Projets de conservation écologique</li>
-          </ul>
-        </section>
-
-        
-        <section className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h2 className="text-2xl font-semibold mb-4">Éducation</h2>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold">AEC en développement d'applications mobiles</h3>
-            <p className="text-gray-600">CEGEP | En cours jusqu'en 2025</p>
-          </div>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold">Diplôme d'ingénieur en écologie</h3>
-            <p className="text-gray-600">Université</p>
-          </div>
-        </section>
-      </main>
-
-      <footer className="bg-blue-600 text-white p-6 text-center">
-        <p>© 2024 Cosmos-Technology.et. Tous droits réservés.</p>
-      </footer>
-    </div>
+      </div>
   );
 }
