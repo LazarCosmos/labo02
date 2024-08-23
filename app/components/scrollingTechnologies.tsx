@@ -8,7 +8,7 @@ interface Technology {
 }
 
 const technologies: Technology[] = [
-{ icon: <img src="/icons/icons8-react.svg" alt="" width={60} height={60} />, name: "React" },
+  { icon: <img src="/icons/icons8-react.svg" alt="" width={60} height={60} />, name: "React" },
   { icon: <img src="/icons/icons8-suivantjs.svg" alt="" width={60} height={60} />, name: "Next.js" },
   { icon: <img src="/icons/icons8-nod-js-48.png" alt="" width={60} height={60} />, name: "Node.js" },
   { icon: <img src="/icons/icons8-tailwind-css.svg" alt="" width={60} height={60} />, name: "Tailwind CSS" },

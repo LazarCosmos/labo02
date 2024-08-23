@@ -63,14 +63,14 @@ const socials= [
 export default function Project() {
 	return (
 
-		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
+		<div className="flex flex-col items-center justify-center w-screen h-screen  bg-gradient-to-tl from-black-500 via-zinc-600/20 to-blue-600">
 
 		<div className="bg-black-800 min-h-screen flex flex-col">
 			<Navigation />
 
 			<div className="flex-1 container flex items-center justify-center px-4 mx-auto pt-[10vh]  ">
 				<div
-					className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 w-full">
+					className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
 					{socials.map((s, index) => (
 						<Card key={index}>
 							<Link
@@ -83,7 +83,7 @@ export default function Project() {
 									aria-hidden="true"
 								/>
 								<span
-									className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+									className="  z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon}
 								</span>
 								<div className="z-10 flex flex-col items-center">
@@ -98,7 +98,7 @@ export default function Project() {
 									{s.img}
 								</div>
 								<span
-									className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+									className=" animate-spin   w-8 h-8 mr-3 relative   flex items-center justify-center h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon2}
 								</span>
 							</Link>

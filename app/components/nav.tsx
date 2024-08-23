@@ -26,13 +26,13 @@ export const Navigation: React.FC = () => {
 						: "bg-zinc-900/100  border-zinc-800 "
 				}`}
 			>
-				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+				<div className="container flex flex-row-reverse items-center justify-between p-4 w-full">
 					<div className="flex justify-between gap-8">
 						<Link
 							href="/projects"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projets
+							Projects
 						</Link>
 						<Link
 							href="/contact"
