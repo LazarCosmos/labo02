@@ -41,8 +41,18 @@ module.exports = {
 				title: "title 3s ease-out forwards",
 				"fade-left": "fade-left 3s ease-in-out forwards",
 				"fade-right": "fade-right 3s ease-in-out forwards",
+				'spin-slow': 'spin 3s linear 1',
+				'spin-medium': 'spin 1.5s linear infinite',
+				'spin-fast': 'spin 0.75s linear infinite',
+				'ping-once': 'ping 1s cubic-bezier(0, 0, 0.2, 1) 1',
 			},
 			keyframes: {
+				ping: {
+					'75%, 100%': {
+						transform: 'scale(1.25)',
+						opacity: '0',
+					},
+				},
 				"fade-in": {
 					"0%": {
 						opacity: "0%",
@@ -59,7 +69,6 @@ module.exports = {
 						transform: "translateX(100%)",
 						opacity: "0%",
 					},
-
 					"30%": {
 						transform: "translateX(0%)",
 						opacity: "100%",
@@ -73,7 +82,6 @@ module.exports = {
 						transform: "translateX(-100%)",
 						opacity: "0%",
 					},
-
 					"30%": {
 						transform: "translateX(0%)",
 						opacity: "100%",
@@ -95,7 +103,6 @@ module.exports = {
 					"80%": {
 						opacity: "100%",
 					},
-
 					"100%": {
 						"line-height": "100%",
 						opacity: "100%",
