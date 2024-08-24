@@ -14,7 +14,7 @@ const socials= [
 		label: "Voir le projet",
 		handle: "Pokemon Card",
 		img : (
-			<div className="relative w-full" style={{ paddingBottom: '56.25%' }}> 
+			<div className="relative w-full hover:scale-150" style={{ paddingBottom: '56.25%' }}>
 				<img src="/Pokemon.jpg" alt="Poké Ball" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
 			</div>
 		),
@@ -63,7 +63,7 @@ const socials= [
 export default function Project() {
 	return (
 
-		<div className="flex flex-col items-center justify-center w-screen h-screen  bg-gradient-to-tl from-black-500 via-zinc-600/20 to-blue-600">
+		<div className="flex flex-col items-center justify-center w-screen h-screen  bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
 
 		<div className="bg-black-800 min-h-screen flex flex-col">
 			<Navigation />
@@ -95,10 +95,11 @@ export default function Project() {
 										className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
+
 									{s.img}
 								</div>
 								<span
-									className=" animate-spin   w-8 h-8 mr-3 relative   flex items-center justify-center h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+									className=" hover:rotate-45 rounded-full w-12 h-12 mr-0 relative flex items-center justify-center text-sm duration-1000 border text-zinc-200 group-hover:text-white">
 									{s.icon2}
 								</span>
 							</Link>

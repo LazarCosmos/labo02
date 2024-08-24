@@ -32,7 +32,7 @@ const technologies: Technology[] = [
 
 export const ScrollingTechnologies: React.FC = () => {
     return (
-      <div className="overflow-hidden bg-Black-800 py-2">
+      <div className="overflow-hidden bg-transparent py-2 w-full">
         <motion.div
           className="flex items-center gap-24"
           animate={{ x: ["100%", "-100%"] }}
@@ -40,7 +40,7 @@ export const ScrollingTechnologies: React.FC = () => {
         >
           {technologies.map((tech, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className=" w-18 h-18 flex items-center justify-center border-gray-500 rounded-full p-1">
+              <div className="active:scale-150 bg-transparent w-18 h-18 flex items-center justify-center border-gray-500 rounded-full p-1">
                 {tech.icon }
               </div>
               <span className="mt-2 text-white text-sm">{tech.name}</span>

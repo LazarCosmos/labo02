@@ -8,18 +8,18 @@ const socials = [
 	{
 		icon: <Linkedin size={20} />,
 		href: "https://www.linkedin.com/in/lazar-cosmos/",
-		label: "Twitter",
-		handle: "voir plus_",
+		label: "voir plus",
+		handle: "Twitter",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
-		label: "Email",
-		handle: "lazhar.contact@gmail.com",
+		href: "lazhar.contact@gmail.com",
+		label: "Envoyer un email",
+		handle: "Email",
 	},
 	{
 		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
+		href: "https://github.com/LazarCosmos",
 		label: "Github",
 		handle: "Lazar",
 	},
@@ -27,7 +27,7 @@ const socials = [
 
 export default function Example() {
 	return (
-		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+		<div className=" bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
@@ -42,7 +42,7 @@ export default function Example() {
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
 									aria-hidden="true"
 								/>
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+								<span className="hover:animate-ping z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon}
 								</span>{" "}
 								<div className="z-10 flex flex-col items-center">

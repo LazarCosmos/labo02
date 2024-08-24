@@ -22,7 +22,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<motion.div
 			onMouseMove={onMouseMove}
-			className="relative overflow-hidden duration-700 border rounded-xl hover:bg-zinc-800/100 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
+			className="relative overflow-hidden duration-700 border-4 rounded-xl hover:bg-zinc-800/100 group md:gap-8 hover:border-zinc-400/50 border-amber-400"
 			whileHover={{ scale: 1.05 }}
 			transition={{ duration: 0.05 }}
 		>
