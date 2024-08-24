@@ -63,53 +63,53 @@ const socials= [
 export default function Project() {
 	return (
 
-		<div className="flex flex-col items-center justify-center w-screen h-screen  bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
-
-		<div className="bg-black-800 min-h-screen flex flex-col">
-			<Navigation />
-
-			<div className="flex-1 container flex items-center justify-center px-4 mx-auto pt-[10vh]  ">
-				<div
-					className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
-					{socials.map((s, index) => (
-						<Card key={index}>
-							<Link
-								href={s.href}
-								target="_blank"
-								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-12 lg:pb-24 md:p-16"
-							>
+		<div className="bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
+			<Navigation/>
+			<div className="  flex  min-h-screen px-4 mx-auto pt-[10vh]">
+				<div className="  grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-2 lg:gap-2">
+					<div
+						className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+						{socials.map((s, index) => (
+							<Card key={index}>
+								<Link
+									href={s.href}
+									target="_blank"
+									className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-12 lg:pb-24 md:p-16"
+								>
 								<span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
 									aria-hidden="true"
 								/>
-								<span
-									className="  z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+									<span
+										className="  z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon}
 								</span>
-								<div className="z-10 flex flex-col items-center">
+									<div className="z-10 flex flex-col items-center">
 									<span
 										className="lg:text-xs font-medium duration-150 xl:text-2xl text-zinc-200 group-hover:text-white font-display">
 										{s.handle}
 									</span>
-									<span
-										className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+										<span
+											className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
 
-									{s.img}
-								</div>
-								<span
-									className=" hover:rotate-45 rounded-full w-12 h-12 mr-0 relative flex items-center justify-center text-sm duration-1000 border text-zinc-200 group-hover:text-white">
+										{s.img}
+									</div>
+									<span
+										className=" hover:rotate-45 rounded-full w-12 h-12 mr-0 relative flex items-center justify-center text-sm duration-1000 border text-zinc-200 group-hover:text-white">
 									{s.icon2}
 								</span>
-							</Link>
-						</Card>
-					))}
-				</div>
-			</div>
+								</Link>
+							</Card>
+						))}
+					</div>
 
+				</div>
+
+
+			</div>
 			<ScrollingTechnologies/>
-		</div>
 		</div>
 	);
 }
