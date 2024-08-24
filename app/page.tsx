@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import React from "react";
-
+import { ScrollingTechnologies } from "./components/scrollingTechnologies";
 
 
 const navigation = [
@@ -15,8 +16,9 @@ const navigation = [
 export default function Home() {
   return (
       <div
+
           className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-blue-500 via-zinc-600/20 to-blue-600">
-          <nav className="my-16 animate-fade-in">
+          <nav className="my-16 animate-fade-in p-2">
               <ul className="flex items-center justify-center gap-4 ">
                   {navigation.map((item) => (
                       <Link
@@ -38,12 +40,11 @@ export default function Home() {
           <h1 className=" rotate-12 px-0.5 z-10 text-2xl text-amber-400 duration-1000 bg-white cursor-default text-edge-outline font-display sm:text-2xl md:text-4xl whitespace-pre-wrap bg-clip-text hover:rotate-[-12] hover:scale-125 ">
               Portfolio
           </h1>
-          <div
-              className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0"/>
-          <div className="my-16 text-center animate-fade-in">
 
 
-          </div>
+
+          <ScrollingTechnologies/>
+
       </div>
   );
 

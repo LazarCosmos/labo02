@@ -36,7 +36,7 @@ export const ScrollingTechnologies: React.FC = () => {
         <motion.div
           className="flex items-center gap-24"
           animate={{ x: ["100%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
           {technologies.map((tech, index) => (
             <div key={index} className="flex flex-col items-center">
